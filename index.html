@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>コーヒー豆リスト</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="function.js"></script>
+  </head>
+  <body>
+    <h1>Coffee Beans</h1>
+
+    <div class="sec01">
+      <div class="sec01__coffeeWrapper">
+        <!--豆の名前  テキスト-->
+        <div class="sec01__coffeeName">
+          <label for="sec01__coffeeName__label">Bean</label>
+          <input
+            type="text"
+            class="sec01__coffeeName__box"
+            placeholder="豆の名前"
+            id="bean"
+          />
+        </div>
+        <!-- 豆の味の種類（酸味、苦味、フルーティー） プルダウン-->
+        <div class="sec01__coffeeTaste">
+          <label for="sec01__coffeeTaste__label">Taste</label>
+          <select name="sec01__coffeeTaste__select" id="taste-select">
+            <option value="">風味を選んでください</option>
+            <option value="苦味">苦味</option>
+            <option value="酸味">酸味</option>
+            <option value="フルーティー">フルーティー</option>
+          </select>
+        </div>
+        <!-- 買った場所 テキスト-->
+        <div class="sec01__coffeeShop">
+          <label for="sec01__coffeeShop__label">Shop</label>
+          <input
+            type="text"
+            class="sec01__coffeeShop__box"
+            placeholder="お店の名前"
+            id="shop"
+          />
+        </div>
+        <!-- 値段 ナンバーのみ、円はもともと書いてある形になる-->
+        <div class="sec01__coffeePrice">
+          <label for="sec01__coffeePrice__label">Price</label>
+          <input
+            type="number"
+            class="sec01__coffeePrice__box"
+            placeholder="金額(半角数字のみ)"
+            id="price"
+          />
+        </div>
+        <!-- 送信フォーム -->
+        <button class="sec01__coffee__submit" id="save">保存</button>
+      </div>
+    </div>
+    <div class="sec02">
+      <div class="sec02__listWrapper" id="list">
+        <ul class="sec02__list">
+          <li class="sec02__list__item" id="listItem">
+            <div class="savedBean">豆</div>
+            <div class="savedTaste">味</div>
+            <div class="savedShop">店</div>
+            <div class="savedPrice">値段（円）</div>
+            <button id="clear">削除</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
